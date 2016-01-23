@@ -7,9 +7,9 @@
 	<key>CFBundleName</key>
 	<string>Vibe.d</string>
 	<key>DocSetPlatformFamily</key>
-	<string>d</string>
+	<string>vibed</string>
   <key>dashIndexFilePath</key>
-  <string>phobos/index.html</string>
+  <string>api/index.html</string>
 	<key>isDashDocset</key>
 	<true/>
   <key>isJavaScriptEnabled</key>
