@@ -16,7 +16,7 @@ task :gen do
 end
 
 task :archive do
-  sh "tar --exclude='.DS_Store' -cvzf D.tgz Vibed.docset"
+  sh "tar --exclude='.DS_Store' -cvzf Vibed.tgz Vibed.docset"
   sh "zip -r Vibed.docset.zip Vibed.docset"
 end
 
