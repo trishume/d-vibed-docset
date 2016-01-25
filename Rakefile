@@ -4,9 +4,15 @@ task :download do
   mv "vibed.org", "Vibed.docset/Contents/Resources/Documents"
 end
 
-# task :restyle do
-#   sh "sed -i '' 's/media only screen and (max-width: 50em)/media only screen/g' 'Vibed.docset/Contents/Resources/Documents/css/style.css'"
-# end
+task :restyle do
+  File.open("Vibed.docset/Contents/Resources/Documents/styles/common.css","a+") do |f|
+    f.puts <<-HEREDOC
+      /* ADDED FOR DASH DOCSET */
+      #bs-main > nav { display: none; }
+      #bs-main.bs-leftnav > section { margin-left: 0 !important; }
+    HEREDOC
+  end
+end
 
 SQLITE_DB = "Vibed.docset/Contents/Resources/docSet.dsidx"
 task :gen do
